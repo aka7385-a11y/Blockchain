@@ -75,9 +75,9 @@ void verify(struct User* curr) {
 
     printf("******** Verifying Log *********\n\n");
 
-    struct Block* prev = NULL;
+    struct User* prev = NULL;
     if (curr != NULL) {
-        prev = curr; // Intentionally modified
+        prev = curr->next; // Intentionally modified
     }
 
     printf("User 1, impossible to verify\n");
