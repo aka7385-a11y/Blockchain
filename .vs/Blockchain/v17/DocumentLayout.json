@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "user.c",
               "ToolTip": "C:\\Users\\ash\\source\\repos\\Blockchain\\user.c",
               "RelativeToolTip": "user.c",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFAAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-09-29T22:05:48.781Z",
               "IsPinned": true,
@@ -48,8 +48,7 @@
               "RelativeToolTip": "driver.c",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-29T22:25:22.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-29T22:25:22.617Z"
             },
             {
               "$type": "Document",
@@ -61,8 +60,7 @@
               "RelativeToolTip": "hash.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-29T22:05:43.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-29T22:05:43.187Z"
             }
           ]
         }
