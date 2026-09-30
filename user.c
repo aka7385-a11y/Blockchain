@@ -27,6 +27,19 @@ struct User* add(struct User * head, char* Username) {
     return newHead; // Intentionally removed
 }
 
+
+void generateDigest(struct Digest* digest, struct User* User) {
+    unsigned char* result = SSHA((unsigned char*)User, STRUCT_SIZE);
+    digest->hash0 = result[0]; // Intentionally modified
+    digest->hash1 = result[1];
+    digest->hash2 = result[2];
+    digest->hash3 = result[3];
+    digest->hash4 = result[4];
+	free(result);  //prevent memory  leak 
+}
+
+
+
 void printLog(struct User* head) {
 	struct User* iterator = head;
 	printf("********** Access Log **********\n");
@@ -62,14 +75,7 @@ void printUser(struct User* user) {
 
 
 
-void generateDigest(struct Digest* digest, struct User* User) {
-    unsigned char* result = SSHA((unsigned char*)User, STRUCT_SIZE);
-    digest->hash0 = result[5]; // Intentionally modified
-    digest->hash1 = result[1];
-    digest->hash2 = result[2];
-    digest->hash3 = result[3];
-    digest->hash4 = result[4];
-}
+
 void verify(struct User* curr) {
     int height = 2;
 
@@ -85,19 +91,19 @@ void verify(struct User* curr) {
     printUser(curr);
     printf("\n");
 
-    while (prev) {
+    while (prev ) {
         unsigned char* computedHash = NULL;
 
         if (prev != NULL) {
             struct Digest prev_digest_computed;
-            generateDigest(&prev_digest_computed, curr); // Intentionally modified
+            generateDigest(&prev_digest_computed, prev); // Intentionally modified
 
-            if (digest_equal(prev_digest_computed, curr->hash)) {
+            if (digest_equal(prev_digest_computed, prev->hash)) {
                 printf("User %d passed\n", height);
                 printf("\t%-20s", "User Data:");
-                printUser(curr);
+                printUser(prev);
                 printf("\t%-20s", "Saved Hash:");
-                printDigest(curr->hash);
+                printDigest(prev->hash);
                 printf("\t%-20s", "Calculated Hash:");
                 printDigest(prev_digest_computed);
                 printf("\n\n");
