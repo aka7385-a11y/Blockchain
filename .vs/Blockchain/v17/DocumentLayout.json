@@ -35,8 +35,7 @@
               "ViewState": "AgIAADwAAAAAAAAAAAAAAEUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-09-29T22:05:48.781Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -46,7 +45,7 @@
               "RelativeDocumentMoniker": "driver.c",
               "ToolTip": "C:\\Users\\ash\\source\\repos\\Blockchain\\driver.c",
               "RelativeToolTip": "driver.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-09-29T22:25:22.617Z",
               "EditorCaption": ""

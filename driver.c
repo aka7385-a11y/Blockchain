@@ -13,6 +13,23 @@ int main(void) {
 	generateDigest(&(digest), head);
 	printDigest(digest);
 
+	struct User* newuser;
+	head = add(head, "newuser");
+	printUser(head);
+	struct Digest newdigest;
+	generateDigest(&(newdigest), head);
+	printf("printing digest of newuser head\n");
+	printDigest(newdigest);
+
+	printf("comparing digest of rob and newuser\n");
+	if (digest_equal(digest, newdigest)) {
+		printf("digests are equal\n");
+	}
+	else {
+		printf("digests are not equal\n");
+	}
+	
+
 
 
 
