@@ -5,7 +5,7 @@
 #include "user.h"
 
 struct User* add(struct User * head, char* Username) {
-	
+		
 	struct User* newHead = (struct User*)malloc(sizeof(struct User));
 	strcpy(newHead->Username, Username);
 	time(&(newHead->loginTime));
@@ -78,7 +78,7 @@ void printUser(struct User* user) {
 void verify(struct User* curr) {
     int height = 2;
 
-    printf("******** Verifying Log *********\n\n");
+    printf("******** Verifying Log *********\n");
 
     struct User* prev = NULL;
     if (curr != NULL) {
@@ -110,12 +110,12 @@ void verify(struct User* curr) {
             else {
                 printf("User %d failed\n", height);
                 printf("\t%-20s", "User Data:");
-                printUser(curr);
+                printUser(prev);
                 printf("\t%-20s", "Saved Hash:");
-                printDigest(curr->hash);
+                printDigest(prev->hash);
                 printf("\t%-20s", "Calculated Hash:");
                 printDigest(prev_digest_computed);
-                printf("\n\n");
+                printf("\n");
                 return;
             }
         }

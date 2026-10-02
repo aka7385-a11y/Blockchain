@@ -32,11 +32,15 @@
               "RelativeDocumentMoniker": "user.c",
               "ToolTip": "C:\\Users\\ash\\source\\repos\\Blockchain\\user.c",
               "RelativeToolTip": "user.c",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFAAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-09-29T22:05:48.781Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -46,10 +50,8 @@
               "RelativeDocumentMoniker": "driver.c",
               "ToolTip": "C:\\Users\\ash\\source\\repos\\Blockchain\\driver.c",
               "RelativeToolTip": "driver.c",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-29T22:25:22.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-29T22:25:22.617Z"
             },
             {
               "$type": "Document",
