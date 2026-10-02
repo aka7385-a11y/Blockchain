@@ -18,8 +18,8 @@ unsigned char* SSHA(const unsigned char* msg, size_t length) {
             E = (g + old_A) & D;
             D = (A ^ B) >> 2;
             C = (C + E) ^ A;
-            A = E;
-            B = old_A;
+            A = D + B;
+            B = B * D;
         }
     }
 
