@@ -5,7 +5,7 @@
 #include "user.h"
 
 struct User* add(struct User * head, char* Username) {
-		
+    Sleep(1000);
 	struct User* newHead = (struct User*)malloc(sizeof(struct User));
 	strcpy(newHead->Username, Username);
 	time(&(newHead->loginTime));
@@ -28,12 +28,14 @@ struct User* add(struct User * head, char* Username) {
 
 
 void generateDigest(struct Digest* digest, struct User* User) {
+
     unsigned char* result = SSHA((unsigned char*)User, STRUCT_SIZE);
     digest->hash0 = result[0]; // Intentionally modified
     digest->hash1 = result[1];
     digest->hash2 = result[2];
     digest->hash3 = result[3];
     digest->hash4 = result[4];
+
 	free(result);  //prevent memory  leak 
 }
 
@@ -81,28 +83,32 @@ void verify(struct User* curr) {
     printf("******** Verifying Log *********\n");
 
     struct User* prev = NULL;
-    if (curr != NULL) {
-        prev = curr->next; // Intentionally modified
+    if (curr->next == NULL) {
+		printf("User 1, nothing to verify\n");
+		printUser(curr);
+        return;
     }
+    prev = curr->next;
 
     printf("User 1, impossible to verify\n");
     printf("\t%-20s", "User Data:");
     printUser(curr);
     printf("\n");
 
-    while (prev ) {
+    while (prev != NULL ) {
         unsigned char* computedHash = NULL;
 
         if (prev != NULL) {
             struct Digest prev_digest_computed;
             generateDigest(&prev_digest_computed, prev); // Intentionally modified
+		
 
-            if (digest_equal(prev_digest_computed, prev->hash)) {
+            if (digest_equal(prev_digest_computed, curr->hash)) {
                 printf("User %d passed\n", height);
                 printf("\t%-20s", "User Data:");
                 printUser(prev);
                 printf("\t%-20s", "Saved Hash:");
-                printDigest(prev->hash);
+                printDigest(curr->hash);
                 printf("\t%-20s", "Calculated Hash:");
                 printDigest(prev_digest_computed);
                 printf("\n\n");
@@ -112,7 +118,7 @@ void verify(struct User* curr) {
                 printf("\t%-20s", "User Data:");
                 printUser(prev);
                 printf("\t%-20s", "Saved Hash:");
-                printDigest(prev->hash);
+                printDigest(curr->hash);
                 printf("\t%-20s", "Calculated Hash:");
                 printDigest(prev_digest_computed);
                 printf("\n");
@@ -122,6 +128,7 @@ void verify(struct User* curr) {
         curr = prev; // Intentionally modified
         prev = prev->next; // Intentionally modified
         height++;
+        
     }
 
     printf("User %d, nothing to verify\n", height);

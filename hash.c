@@ -2,6 +2,7 @@
 
 unsigned char* SSHA(const unsigned char* msg, size_t length) {
     unsigned char A, B, C, D, E; //Initial Seed Value
+
     A = 56;
     B = 99;
     C = 102;
@@ -27,7 +28,8 @@ unsigned char* SSHA(const unsigned char* msg, size_t length) {
     digest[1] = B;
     digest[2] = C;
     digest[3] = D;
-    digest[4] = D;
+    digest[4] = E;
+    
     return digest;
 }
 
