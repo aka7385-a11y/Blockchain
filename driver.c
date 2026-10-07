@@ -9,7 +9,7 @@ int main(void) {
 	head = add(head, "rob");
 	head = add(head, "hanif");
 	head = add(head, "gahyun");
-	head = add(head, "matt");
+	head = add(head, "matt"); 
 	head = add(head, "sumita");
 	printf("verifying log\n");
 	verify(head);
